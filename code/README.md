@@ -11,6 +11,7 @@ After this, you will need to install certain packages in nltk
 python3
 >>> import nltk
 >>> nltk.download('wordnet')
->>> nltk.download(’punkt’)
+>>> 
+
 >>> exit()
 ```

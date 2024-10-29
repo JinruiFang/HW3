@@ -55,12 +55,11 @@ def do_train(args, model, train_dataloader, save_dir="./out"):
             loss = outputs.loss
             
             # Backward pass and optimization
-            optimizer.zero_grad()  # Clear gradients
             loss.backward()        # Backpropagation
-            optimizer.step()       # Update model parameters
-            
+            optimizer.step()       # Update model parameters            
             # Learning rate scheduling
             lr_scheduler.step()
+            optimizer.zero_grad()
 
             # Update the progress bar
             progress_bar.update(1)
