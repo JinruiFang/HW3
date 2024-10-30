@@ -70,7 +70,7 @@ def custom_transform(example):
     text = synonym_replacement(text, prob=0.2)
 
     # Apply typo introduction with 10% probability
-    text = typo_introduction(text, prob=0.1)
+    text = typo_introduction(text, prob=0.2)
 
     # Update the example with the transformed text
     example["text"] = text
